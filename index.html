@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>sogagette</title>
+</head>
+<body>
+  <div id="wrapperIndex">
+    <header class="titleHeader_index">
+      <h1 class="glow tintable h1Title"><span class="autoTypeGreeting"></span></h1>
+    </header>
+    <nav class="buyNav">
+<!--        <a href="https://store.steampowered.com/" class="anchorIndex">
+          BUY NOW
+        </a>
+        <a href="guide.html" class="anchorIndex" >
+          GUIDE
+        </a>
+        <a href="gallery.html" class="anchorIndex">
+          GALLERY
+        </a>-->
+    </nav>
+    <aside class="galNav">
+      <img class="asideImage_index" src="img/.png" alt="img here">
+    </aside>
+
+
+
+    <main class="paragraphMain">
+      <p class="tintable fadeIn pDescription">
+        I am 20 years old, studying physics at the University of Gothenburg, Sweden. 
+        </br></br> I have over three years of serious programming experience. I am proficient in languages such as Lua, Python, Ruby, and MATLAB.
+      </p>
+    </main>
+    <aside class="imageAsideL"></aside>
+    <aside class="imageAsideR"></aside>
+
+
+
+    <div class="showcaseDiv">
+      <h1 class="glow tintable fadeIn h1Showcase"><span class="autoTypeShowcaseHeading"></span></h1>
+
+      <article class="showcaseArticle">
+        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
+        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
+        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
+          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
+          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
+        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
+      </article>
+      <article class="showcaseArticle">
+        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
+        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
+        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
+          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
+          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
+        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
+      </article>
+            <article class="showcaseArticle">
+        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
+        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
+        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
+          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
+          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
+        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
+      </article>
+            <article class="showcaseArticle">
+        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
+        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
+        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
+          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
+          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
+        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
+      </article>
+    </div>
+    <aside class="imageAside2L"></aside>
+    <aside class="imageAside2R"></aside>
+
+  </div>
+
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+  <script src="/js/dopplerShift.js"></script>
+  <script>
+    var typed = new Typed(".autoTypeGreeting", {
+    strings: ["hello, I'm sogagette.", "hej! jag heter sogagette.", "oi, eu sou a sogagette.", "zdravo."],
+    typeSpeed: 70,
+    backSpeed: 20,
+    backDelay: 6000,
+    smartBackspace: true,
+    loop: true,
+    })
+  </script>
+  <script>
+    var typed = new Typed(".autoTypeShowcaseHeading", {
+    strings: ["showcase"],
+    typeSpeed: 70,
+    loop: false,
+    })
+  </script>
+</body>
+</html>
