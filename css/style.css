@@ -158,12 +158,13 @@
         display: grid;
         min-height: 100vh;
         width: 100%;
-        grid-template-columns: 20% 60% 10%;
-        grid-template-rows: auto auto auto;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
             'indexNavL h1Hd buyNav'
             'imgAsL pMn imgAsR'
             'showcase showcase showcase'
+            'pastGames pastGames pastGames'
         ;
         background-blend-mode: multiply;
         
@@ -216,6 +217,7 @@
     border-style: solid;
     border-color: #8C3781;
     border-width: 0rem;
+    padding-top: 4rem;
 
     display: flex;
     flex-direction: column;
@@ -495,6 +497,92 @@
     text-shadow: #e20e0e 0rem 0.2rem 1rem;
 }
 
+.pastGamesDiv{
+    grid-area: pastGames;
+    
+    width: 100%;
+
+    border-style: ridge;
+    border-color: #8C3781;
+    border-width: 0.00rem;
+
+    padding-top: 20rem;
+    padding-bottom: 4rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 9rem;
+}
+.pastGamesArticle{
+    display:grid;
+    width: 30%;
+    height: auto;
+    border-style: solid;
+    border-width: 0.00rem;
+
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'showcaseHeading'
+        'showcaseEmbed'
+        'showcaseThumbnails'
+        'showcaseParagraph'
+    ; 
+
+    border-color: #811e35;
+}
+
+.pastGamesArticleImage{
+    grid-area: showcaseEmbed;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-style:solid;
+    border-width:0.05rem;
+
+    border-radius: 0.5rem;
+}
+
+.pastGamesArticleHeading{
+    grid-area: showcaseHeading;
+    font-family: "Jupiteroid Regular";
+    text-align:center;
+    font-size: 6rem;
+    padding-bottom: 1rem;
+
+    border-width: 0.0rem;
+    border-style: solid;
+    border-color: #811e35;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    margin: 0;
+}
+
+.pastGamesArticleParagraph{
+    grid-area: showcaseParagraph;
+    font-family: "Jupiteroid Regular";
+    text-align:left;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+
+    border-width: 0.0rem;
+    border-style: solid;
+    border-color: #811e35;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    margin: 0;
+}
+
+
 .showcaseDiv{
     grid-area: showcase;
 
@@ -502,7 +590,7 @@
 
     border-style: ridge;
     border-color: #8C3781;
-    border-width: 0rem;
+    border-width: 0.00rem;
 
     padding-top: 20rem;
 
@@ -510,8 +598,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content:flex-start;
-    gap: 50px;
+    gap: 9rem;
     padding-left: 3rem;
+    padding-right: 3rem;
     padding-bottom: 50px;
 }
 
@@ -520,17 +609,41 @@
 
     min-height: 700px;
     height: auto;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     border-style: solid;
     border-width: 0.00rem;
 
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 1fr;
+    grid-template-columns: 45% 35% 1fr;
+    grid-template-rows: 1fr 80%;
     grid-template-areas:
-        'showcaseEmbed showcaseHeading'
-        'showcaseEmbed showcaseParagraph'
+        'showcaseEmbed showcaseHeading lookInsideDiv'
+        'showcaseEmbed showcaseParagraph lookInsideDiv'
     ; 
+
+    align-self: flex-start;
+
+    border-color: #811e35;
+}
+
+.showcaseArticleFlipped{
+    display:grid;
+
+    min-height: 700px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    border-style: solid;
+    border-width: 0.00rem;
+
+    grid-template-columns: 35% 45% 1fr;
+    grid-template-rows: 1fr 80%;
+    grid-template-areas:
+        'showcaseHeading showcaseEmbed lookInsideDiv'
+        'showcaseParagraph showcaseEmbed lookInsideDiv'
+    ; 
+
+    align-self: flex-start;
 
     border-color: #811e35;
 }
@@ -539,7 +652,7 @@
     grid-area: showcaseEmbed;
 
     width: 100%;
-    height: 100%;
+    height: auto;
 
     object-fit: cover;
     object-position: bottom;
@@ -554,13 +667,14 @@
     font-family: "Jupiteroid Regular";
     text-align:start;
     padding-left: 3rem;
+    padding-right: 3rem;
     font-size: 3.5rem;
 
-    border-width: 0.0rem;
+    border-width: 0.00rem;
     border-style: solid;
     border-color: #811e35;
 
-    overflow-wrap: break-word;
+    overflow-wrap:anywhere;
     word-break: normal;
     margin: 0;
 }
@@ -570,8 +684,10 @@
     font-family: "Jupiteroid Regular";
     text-align:left;
     padding-left: 3rem;
-    padding-right: 1rem;
+    padding-right: 3rem;
     font-size: 1.5rem;
+    padding-top: 2rem;
+
 
     border-width: 0.0rem;
     border-style: solid;
@@ -582,3 +698,37 @@
     margin: 0;
 }
 
+.showcaseArticleFlipped > .showcaseArticleHeading {
+    padding-left: 0rem;
+}
+.showcaseArticleFlipped > .showcaseArticleParagraph {
+    padding-left: 0rem;
+}
+
+.lookInsideDiv{
+    grid-area: lookInsideDiv;   
+
+    width: 100%;
+    height: auto;
+
+
+}
+
+.lookInsideExpandButton{
+    width: 100%;
+    height:20%;
+}
+
+.emoji{
+    height: 1em;        
+    width: 1em;
+    vertical-align: -0.125em;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-shadow: color-mix(in srgb, var(--scroll-tint) 100%, transparent) 0 0 20px;
+}
