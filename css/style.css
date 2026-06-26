@@ -225,6 +225,47 @@
     justify-content: center;
 }
 
+.titleHeader_guide{
+    grid-area: h1Hd;
+    border-style: solid;
+    border-color: #8C3781;
+    border-width: 1rem;
+    background-image: url(/img/guideBG.png);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buyNav{
+    grid-area: buyNav;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.galNav{
+    grid-area: indexNavL;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .paragraphMain{
     grid-area: pMn;
     background-size: 100% 220%;
@@ -237,6 +278,200 @@
     border-color: #8C3781;
     border-width: 0rem;
 }
+
+.imageAsideL{
+    grid-area: imgAsL;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imageAsideR{
+    grid-area: imgAsR;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageAside2L{
+    grid-area: imgAs2L;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imageAside2R{
+    grid-area: imgAs2R;
+    object-position: center;
+
+    
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.anchorIndex{
+    text-decoration: none;
+    color:#FF8BEF;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
+    margin: 5px;
+
+    border-style:double;
+    background-size: 104% 220%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anchorIndex:hover{
+    text-decoration: none;
+    color:#d140bd;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
+    margin: 5px;
+
+    border-style: double;
+    background-size: 114% 230%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GALLERY */
+
+#gallery{
+    grid-area: galMn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: ridge;
+    border-width: .4rem;
+    border-color: #891d7a;
+    flex-direction: column;
+    background: #201C1C;
+}
+
+.buttonsGallery{
+    margin-top: 3%;
+}
+.buttonsGallery button{
+    background-image: url("/img/dialogueBox.png");
+    background-size: 104% 250%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color:#8C3781;
+    padding: 15px 45px;
+    font-family: 'VCR OSD Mono';
+    font-size: 18px;
+    color: #FF8BEF;
+}
+
+
+.currentImage.changeImage{
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+}
+
+.currentCaption{
+    font-family: 'VCR OSD Mono';
+    color: #FF8BEF;
+    opacity: 1;
+}
+.currentCaption.changeImage{
+    opacity: 0.5;
+}
+
+.homeButton{
+    text-decoration: none;
+    color:#FF8BEF;
+    background-color: #811e35;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    background-size: 104% 220%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homeButton:hover{
+    text-decoration: none;
+    color:#d140bd;
+    font-family: 'VCR OSD Mono';
+    font-size: 200%;
+
+    width: 96%;
+    height: 100%;
+    margin: 5px;
+
+    background-image: url('/img/dialogueBox.png');
+    background-size: 104% 220%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.asideImage_index{
+    width: 70%;
+    margin-left: auto;
+    image-rendering: pixelated;
+    margin-right: auto; 
+    margin-bottom: 2rem;
+}
+
 
 
 
@@ -251,7 +486,6 @@
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
     font-size: 5rem;
-    padding-left: 2rem;
 }
 
 .pDescription{
@@ -296,8 +530,6 @@
     gap: 0.5rem;
 
     border-color: #811e35;
-
-    padding-right: 2rem;
 }
 
 .pastGamesArticleMedia{
@@ -436,7 +668,7 @@
 }
 
 .showcaseArticleIFrame{
-    height: 70%;
+    height: 75.65%;
 }
 
 .showcaseArticleHeading{
