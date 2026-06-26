@@ -525,7 +525,7 @@ a:hover {
     text-shadow: color-mix(in srgb, var(--scroll-tint) 100%, transparent) 0 0 20px;
 }
 
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-width: 1000px) {
     #wrapperIndex {
         grid-template-columns: 5% 90% 5%;
     }
