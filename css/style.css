@@ -167,15 +167,6 @@ body {
 
 .paragraphMain {
     grid-area: pMn;
-    background-size: 100% 220%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-
-    border-style: solid;
-    border-color: #8C3781;
-    border-width: 0rem;
 }
 
 .imageAsideL {
@@ -254,7 +245,6 @@ body {
 
 .pDescription {
     text-align: left;
-    padding-left: 50px;
     font-family: 'Jupiteroid Regular';
     font-size: 2rem;
     padding-top: 10rem;
@@ -526,7 +516,11 @@ a:hover {
     text-shadow: color-mix(in srgb, var(--scroll-tint) 100%, transparent) 0 0 20px;
 }
 
-@media screen and (max-width: 1000px) {
+.h1Title {
+    min-height: 3.5em;
+}
+
+@media screen and (max-width: 1200px) {
     #wrapperIndex {
         grid-template-columns: 5% 90% 5%;
     }
@@ -639,11 +633,11 @@ a:hover {
     }
 
     .h1Title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         word-break: break-word;
     }
     .h1Showcase {
-        font-size: 2.5rem;
+        font-size: 3rem;
         word-break: break-word;
         text-align: center;
     }
