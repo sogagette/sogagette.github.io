@@ -38,26 +38,11 @@
     <aside class="imageAsideL"></aside>
     <aside class="imageAsideR"></aside>
 
-    <div class="pastGamesDiv">
-      <h1 class="glow tintable fadeIn h1Showcase"><span class="autoTypePastGamesHeading"></span></h1>
-
-      <article class="pastGamesArticle">
-        <video class="pastGamesArticleImage tintable" src="/img/rmmButterflies.mp4" alt="img here" controls></video>
-        <a class="pastGamesArticleHeading tintable glow" href="https://www.roblox.com/games/130328705019422/Rate-My-Music">Rate My Music</a>
-        <p class="pastGamesArticleParagraph tintable">A social hangout game that used the Spotify API to display your listening activity in game. I scripted several front-end aspects of the game and was responsible for the game's UI. The game has sadly shut down since, as Roblox's chat update hurt its social aspects immensely.</h1>
-      </article>
-      <article class="pastGamesArticle">
-        <video class="pastGamesArticleImage tintable" src="/img/pegoTeaser.mp4" alt="img here" controls></video>
-        <a class="pastGamesArticleHeading tintable glow">Project E.G.O.</a>
-        <p class="pastGamesArticleParagraph tintable">An upcoming PvP focused RPG with parry-focused combat, based on the world of Project Moon. My responsibilities involve UI, story writing, other graphic elements and front-end code.</h1>
-      </article>
-    </div>
-
   <div class="showcaseDiv">
       <h1 class="glow tintable fadeIn h1Showcase"><span class="autoTypeShowcaseHeading"></span></h1>
 
       <article class="showcaseArticle">
-        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
+        <iframe class="showcaseArticleMedia showcaseArticleIFrame tintable" src="https://drive.google.com/file/d/1cLLKUJJDPDxispxHftZ8mAdqRyIMQE6z/preview" alt="img here" controls></iframe>
         <h1 class="showcaseArticleHeading tintable glow">[LUAU] Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
         <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
           </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
@@ -65,35 +50,34 @@
         </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
       </article>
       <article class="showcaseArticleFlipped">
-        <image class="showcaseArticleImage tintable" src="/img/milkyWay.png" alt="img here" controls></image>
-        <a class="showcaseArticleHeading tintable glow" href="">[PYTHON] Astronomical algorithm for detecting hydrogen gas clouds in the Milky Way galaxy <image class="emoji" src="img/githubIcon.svg"></image></a>
-        <p class="showcaseArticleParagraph tintable">An algorithm written in Python used to analyze astronomical data collected with a radio telescope.
-          </br></br>  I wrote it for a project in which I used a radio telescope to look at emissions of radio waves with wavelengths of 21cm to detect hydrogen clouds in our galaxy, commonly known as nebulae.
-          </br></br>  The algorithm iterates through a series of CSV files and systematically detects points of interest in intensity and handles them accordingly, eventually resulting in cartesian coordinates that can be plotted as seen in the image (red dots).
-          </br></br>  The plot with red dots is overlayed on top of NASA's artistic rendition of the Milky Way galaxy grounded in similar radioastronomical experiments. Hydrogen clouds are where stars are born, meaning that their location corresponds to the brightest parts of the galaxy. The spiral shape in the plot is evident.
-          </br></br>  [NOTE] 
+        <image class="showcaseArticleMedia tintable" src="/img/milkyWay.png" alt="img here" controls></image>
+        <a class="showcaseArticleHeading tintable glow" target="_blank" href="https://github.com/sogagette/Hydrogen-line-mapping-algorithm">[PYTHON] Astronomical algorithm for detecting hydrogen gas clouds in the Milky Way galaxy <image class="emoji" src="img/githubIcon.svg"></image></a>
+        <p class="showcaseArticleParagraph tintable">An algorithm written in Python used to analyze astronomical data of interstellar hydrogen clouds collected with a radio telescope.
+          </br></br>  I wrote it for a project in which I used a radio telescope to look at emissions of radio waves of wavelength 21cm, which originate from large clouds of neutral hydrogen in deep space, billions upon billions of kilometers away from planet earth.
+          </br></br>  The algorithm iterates through a series of DSV files and systematically detects points of interest in intensity, each representing a cloud. Using the doppler effect we can obtain their velocity relative to us. Using the milky way's rotational curve we can then use basic trigonometry to determine the clouds' locations in cartesian coordinates which can in turn be plotted as seen in the image (each red dot represents a cloud scaled by its intensity).
+          </br></br>  The plot with red dots is overlayed on top of NASA's artistic rendition of the Milky Way galaxy grounded in similar radio-astronomical experiments. Hydrogen clouds are where stars are born, meaning that their locations corresponds to the brightest parts of the galaxy. The spiral shape in the plot is evident.
+          </br></br>  [NOTE]
           </br>  The left part of the galaxy is uncharted. This is due to my own personal geographical location; the portion of the sky visible from Sweden does not include those blank parts of the galaxy in September, making it impossible to collect data from galactic longitudes 240-360 at the time of the experiment.
       </h1>
-      </article>
-            <article class="showcaseArticle">
-        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
-        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
-        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
-          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
-          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
-        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
-      </article>
-            <article class="showcaseArticle">
-        <video class="showcaseArticleImage tintable" src="/img/flightsimShowcase.mp4" alt="img here" controls></video>
-        <h1 class="showcaseArticleHeading tintable glow">Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
-        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
-          </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
-          </br></br>  Server-side and client-side state naturally converges as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
-        </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</h1>
       </article>
     </div>
     <aside class="imageAside2L"></aside>
     <aside class="imageAside2R"></aside>
+  </div>
+
+  <div class="pastGamesDiv">
+    <h1 class="glow tintable fadeIn h1Showcase"><span class="autoTypePastGamesHeading"></span></h1>
+
+    <article class="pastGamesArticle" data-media='[{"path":"https://drive.google.com/file/d/1SgHGemLSiNVy_wKfXMzi1Bn6QEgmBrS0/view?usp=drive_link","caption":"Doi doi dududoi"}, {"path":"img/pastGames/rmmEmpty.png","caption":"cap 2"}]'>
+      <a class="pastGamesArticleHeading tintable glow" href="https://www.roblox.com/games/130328705019422/Rate-My-Music">Rate My Music</a>
+      <div class="pastGamesArticleMedia tintable"><button class="mediaLeftButton"><img class="mediaButtonImage" src="/img/leftArrow.svg" alt=""></button><div class="mediaContainer"></div><button class="mediaRightButton"><img class="mediaButtonImage" src="/img/rightArrow.svg" alt=""></button></div>
+      <p class="pastGamesArticleParagraph tintable">A social hangout game that used the Spotify API to display your listening activity in-game. I scripted several front-end aspects and was responsible for the game's UI. After a few months of being online, Roblox's chat update hurt the game's social aspects immensely and it ended up shutting down.</h1>
+    </article>
+    <article class="pastGamesArticle" data-media='[{"path":"img/pastGames/rmmButterflies.mp4","caption":"Doi doi dududoi"}, {"path":"https://drive.google.com/file/d/1G5DV21XnELxmSM2IDpiQVdxtn2_sFcl0/view?usp=drive_link","caption":"cap 2"}]'>
+      <a class="pastGamesArticleHeading tintable glow">Project E.G.O.</a>
+      <div class="pastGamesArticleMedia tintable"><button class="mediaLeftButton"><img class="mediaButtonImage" src="/img/leftArrow.svg" alt=""></button><div class="mediaContainer"></div><button class="mediaRightButton"><img class="mediaButtonImage" src="/img/rightArrow.svg" alt=""></button></div>
+      <p class="pastGamesArticleParagraph tintable">An upcoming PvP focused RPG with parry-focused combat, based on the world of Project Moon. My responsibilities involve UI, story writing, other graphic elements and front-end code.</h1>
+    </article>
   </div>
 
   <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
@@ -130,5 +114,6 @@
     loop: false,
     })
   </script>
+  <script src="/js/galleryScript.js"></script>
 </body>
 </html>

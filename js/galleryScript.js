@@ -1,37 +1,54 @@
+document.querySelectorAll('.pastGamesArticle').forEach(article => {
+  const container = article.querySelector('.mediaContainer');
+  const prevButton = article.querySelector('.mediaLeftButton');
+  const nextButton = article.querySelector('.mediaRightButton');
 
+  if (!container || !prevButton || !nextButton) return;
 
-const gallery = document.getElementById('gallery')
-const prevButton = document.getElementById('prevButton')
-const nextButton = document.getElementById('nextButton')
+  const media = JSON.parse(article.dataset.media);
+  let currentIndex = 0;
 
-const images = [['img/gallery_TLB.png', "On the surface lay a frigid wasteland.", "A picture of a snowy land with mountains in the background. The main character of the game is standing in the snow, facing a building made of scrap metal."], ['img/gallery_jelly.png', "Friend or foe?", "The main character of the game is facing a shadowy figure in a cave. Behind it, a couple of jellyfish are floating."], ['img/gallery_pax.png', "Meet Pax and Floresco, the first sinners", "The main character is facing Pax. He is a green human made of grass. Behind him, his brother Floresco is on the ground, wounded."]];
-let currentIndex = 0;
-
-prevButton.addEventListener('click', () => {
-  currentIndex = currentIndex -= 1
-  updateImage();
-})
-nextButton.addEventListener('click', () => {
-  currentIndex = currentIndex += 1
-  updateImage();
-})
-
-function updateImage(){
-if(currentIndex < 0){
-    currentIndex = (images.length - 1)
+function getDriveEmbedUrl(url) {
+  const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (match) return `https://drive.google.com/file/d/${match[1]}/preview`;
+  return url; // fallback: return as-is if it doesn't match
 }
-else if(currentIndex > (images.length - 1)){
-    currentIndex = (0)
+
+function updateMedia() {
+  if (currentIndex < 0) currentIndex = media.length - 1;
+  else if (currentIndex > media.length - 1) currentIndex = 0;
+
+  container.innerHTML = '';
+  const src = media[currentIndex].path;
+  const isDriveLink = src.includes('drive.google.com');
+  const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
+
+  if (isDriveLink) {
+    const iframe = document.createElement('iframe');
+    iframe.src = getDriveEmbedUrl(src);
+    iframe.classList.add('media');
+    iframe.allowFullscreen = true;
+    iframe.allow = 'autoplay';
+    // No frameborder (use CSS instead)
+    iframe.style.border = 'none';
+    container.appendChild(iframe);
+  } else if (isVideo) {
+    const video = document.createElement('video');
+    video.src = src;
+    video.controls = true;
+    video.loop = true;
+    video.classList.add('media');
+    container.appendChild(video);
+  } else {
+    const img = document.createElement('img');
+    img.src = src;
+    img.classList.add('media');
+    container.appendChild(img);
+  }
 }
-  const img = gallery.querySelector('.currentImage');
-  const imgCaption = gallery.querySelector('.currentCaption');
-  img.classList.add('changeImage');
-  imgCaption.classList.add('changeImage');
-  setTimeout(() => {
-    img.src = images[currentIndex][0]
-    img.alt = images[currentIndex][2]
-    img.classList.remove('changeImage');
-    imgCaption.innerHTML = images[currentIndex][1]
-    imgCaption.classList.remove('changeImage');
-  }, 500);
-}
+
+  prevButton.addEventListener('click', () => { currentIndex--; updateMedia(); });
+  nextButton.addEventListener('click', () => { currentIndex++; updateMedia(); });
+
+  updateMedia(); // render the first item immediately
+});
