@@ -462,7 +462,8 @@ body {
 
 .mediaContainer {
     width: 100%;
-    height: 400px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     /* match whatever height you want */
     position: relative;
 }
@@ -528,6 +529,10 @@ a:hover {
 @media screen and (max-width: 1000px) {
     #wrapperIndex {
         grid-template-columns: 5% 90% 5%;
+    }
+
+    .h1Title {
+        min-height: 3em;
     }
 
     .pastGamesDiv {
@@ -634,17 +639,17 @@ a:hover {
     }
 
     .h1Title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         word-break: break-word;
     }
     .h1Showcase {
-        font-size: 3rem;
+        font-size: 2.5rem;
         word-break: break-word;
         text-align: center;
     }
 
     .pastGamesArticleHeading, .showcaseArticleHeading{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     html {
