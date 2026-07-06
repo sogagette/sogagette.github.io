@@ -17,8 +17,9 @@
     <main class="paragraphMain">
       <p class="tintable fadeIn pDescription">
         I am 20 years old, majoring in physics at the University of Gothenburg, Sweden. 
-        </br></br> I have over three years of experience developing software and games. I am proficient in languages such as Lua, Python, Ruby, and MATLAB.
+        </br></br> I have over three years of experience developing software such as scientific algorithms, data analysis programs and videogames. I am proficient in languages such as Lua, Python, Ruby, and MATLAB.
         </br></br> During my time developing Roblox games I have scripted systems, built interfaces, and created graphical assets for games that accumulated over half a million visits and generated millions of Robux.
+        </br></br> Unlike many other developers, I intend to face major mathematical challenges in scripting head on and apply the knowledge I've studied for to come up with highly advanced yet efficient solutions for complex simulation problems such as collision detection and vehicle physics, as well as the networking challenges that come with it.
       </p>
     </main>
     <aside class="imageAsideL"></aside>
@@ -29,8 +30,8 @@
 
       <article class="showcaseArticle">
         <iframe class="showcaseArticleMedia showcaseArticleIFrame tintable" src="https://drive.google.com/file/d/1cLLKUJJDPDxispxHftZ8mAdqRyIMQE6z/preview"></iframe>
-        <h1 class="showcaseArticleHeading tintable glow">[LUAU] Semi-newtonian flight simulator with client-sided prediction and server reconciliation</h1>
-        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
+        <a class="showcaseArticleHeading tintable glow" target="_blank" href="https://gist.github.com/sogagette/f9dc2bd59b05240a756fd10576b94502">[LUAU] Semi-newtonian flight simulator with client-sided prediction and server reconciliation<image class="emoji" src="img/githubIcon.svg"></image></a>
+        <p class="showcaseArticleParagraph tintable">An extremely advanced system of scripts consisting of over 10 modules and over 10 thousand lines of code used in my spaceflight simulator Raspberry Blueshift. 
           </br></br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
           </br></br>  Server-side and client-side states naturally converge as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
         </br></br> This leads to very smooth gameplay for the local player, while the server's authority over client ensures consistent PvP and guards against exploiters.</p>
