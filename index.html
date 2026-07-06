@@ -30,7 +30,7 @@
 
       <article class="showcaseArticle">
         <iframe class="showcaseArticleMedia showcaseArticleIFrame tintable" src="https://drive.google.com/file/d/1cLLKUJJDPDxispxHftZ8mAdqRyIMQE6z/preview"></iframe>
-        <a class="showcaseArticleHeading tintable glow" target="_blank" href="https://gist.github.com/sogagette/f9dc2bd59b05240a756fd10576b94502">[LUAU] Semi-newtonian flight simulator with client-sided prediction and server reconciliation<image class="emoji" src="img/githubIcon.svg"></image></a>
+        <a class="showcaseArticleHeading tintable glow" target="_blank" href="https://gist.github.com/sogagette/f9dc2bd59b05240a756fd10576b94502">[LUAU] Semi-newtonian flight simulator with client-sided prediction and server reconciliation <image class="emoji" src="img/githubIcon.svg"></image></a>
         <p class="showcaseArticleParagraph tintable">A system of scripts consisting of over 10 modules used in my spaceflight simulator Raspberry Blueshift. 
           <br><br>  Client reads user input and predicts the spaceship's movement, and the server receives the same inputs through a deliberate input buffering system. Ship state (position, velocity etc.) is stepped forward by the same flight model on both server and client side.
           <br><br>  Server-side and client-side states naturally converge as they both use the same physics module (also written by me), but they drift apart over time due to floating point error. This is mitigated by making small, smooth corrections on the client side, listening to the server as the only authority.
