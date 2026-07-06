@@ -520,7 +520,7 @@ a:hover {
     min-height: 3.5em;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     #wrapperIndex {
         grid-template-columns: 5% 90% 5%;
     }
